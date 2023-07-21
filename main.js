@@ -28,24 +28,29 @@ function getApi(){
 
     for (let i = 0; i < char.length; i++) {
 
-          lista = document.createElement('li');
+          card = document.createElement('li');
           charArray.push(char[i])
           // console.log(charArray[i])
           nome = (charArray[i].name)
-          console.log(nome)
+       
           imagem = (charArray[i].image)
-          console.log(imagem)
+
       
-          lista = document.createElement('li')
-          listaNome = document.createElement('p')
+          card = document.createElement('li')
+          info = document.createElement('div')
+          info.className = "info"
+
+          infoNome = document.createElement('p')
           
       
-          $(listaNome).html(nome)
-          $(lista).addClass('card animate__animated animate__fadeIn animate__delay-1s')   
-          $(lista).append(listaNome)
+          $(infoNome).html(`Nome: ${nome}`)
+          $(card).addClass('card animate__animated animate__fadeIn animate__delay-1s')   
           
-          $(elemento).append(lista)
-          $(lista).append(`<img src="${imagem}" width="100%"/>`)
+          
+          $(elemento).append(card)
+          $(card).append(`<div class="img"><img src="${imagem}" width="200px"/></div>`)
+          $(card).append(info)
+          $(info).append(infoNome)
 
     }
   })
@@ -56,60 +61,3 @@ function getApi(){
 }
 
 getApi();
-
-
-
-
-
-
-
-
-
-
-// urls.forEach(url => {
-//   requests.push(axios.get(url));
-// });
-// axios.all(requests)
-
-// .then(axios.spread((...responses) => {
-//     responses.forEach(response =>{
-
-//         console.log(response.data.results)
-
-
-//         // var char = response.data.results;
-
-//         // for (var i = 0; i < char.length; i++) {
-        
-//         //     lista = document.createElement('li');
-            
-//         //     charArray.push(char[i])
-//         //     // console.log(charArray[i])
-//         //     nome = (charArray[i].name)
-//         //     console.log(nome)
-//         //     imagem = (charArray[i].image)
-//         //     console.log(imagem)
-        
-//         //     lista = document.createElement('li')
-//         //     listaNome = document.createElement('p')
-            
-        
-//         //     $(listaNome).html(nome)
-//         //     $(lista).append(listaNome)
-            
-//         //     $(elemento).append(lista)
-//         //     $(lista).append(`<img src="${imagem}" width="100%"/>`)
-        
-        
-//         // }
-
-
-//     })
-// }))
-// .catch(function(error){
-//     console.log(error);
-// })
-
-
-
-
