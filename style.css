@@ -7,7 +7,7 @@
 
 @font-face {
     font-family: get_schwifty;
-    src: url(/assets/fonts/get-schwifty/get_schwifty.ttf);
+    src: url(./assets/fonts/get-schwifty/get_schwifty.ttf);
  }
 
 h1,h2{
