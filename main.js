@@ -8,7 +8,6 @@ function soma(){
   
   if (page <= 48){
   page = page + 1
-  console.log(botao)
 
   }else{
     $(botao).attr('onclick','')
@@ -32,6 +31,13 @@ function getApi(){
           charArray.push(char[i])
           // console.log(charArray[i])
           nome = (charArray[i].name)
+          local = (charArray[i].location.name)
+          console.log(local)
+          origem = (charArray[i].origin.name)
+          console.log(origem)
+          charStatus = (charArray[i].status)
+          console.log(charStatus)
+
        
           imagem = (charArray[i].image)
 
@@ -41,16 +47,27 @@ function getApi(){
           info.className = "info"
 
           infoNome = document.createElement('p')
+          infoNome.className = "name"
+          infoLocal = document.createElement('p')
+          infoStatus = document.createElement('p')
+          infoOrigem = document.createElement('p')
           
       
           $(infoNome).html(`${nome}`)
+          $(infoLocal).html(`localização: ${local}`)
+          $(infoStatus).html(`${charStatus}`)
+          $(infoOrigem).html(`origem: ${origem}`)
+
           $(card).addClass('card animate__animated animate__fadeIn animate__delay-1s')   
           
           
           $(elemento).append(card)
-          $(card).append(`<div class="img"><img src="${imagem}" width="200px"/></div>`)
+          $(card).append(`<div class="img"><img src="${imagem}" width="100%"/></div>`)
           $(card).append(info)
           $(info).append(infoNome)
+          $(info).append(infoLocal)
+          $(info).append(infoStatus)
+          $(info).append(infoOrigem)
 
     }
   })
@@ -62,9 +79,7 @@ function getApi(){
 
 getApi();
 
-
 const audioPortal = new Audio('./assets/sound/portal-gun-sound-effect.mp3');
-
 
 function portalInteract(){
   audioPortal.play();
