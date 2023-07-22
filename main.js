@@ -43,7 +43,7 @@ function getApi(){
           infoNome = document.createElement('p')
           
       
-          $(infoNome).html(`Nome: ${nome}`)
+          $(infoNome).html(`${nome}`)
           $(card).addClass('card animate__animated animate__fadeIn animate__delay-1s')   
           
           
@@ -61,3 +61,17 @@ function getApi(){
 }
 
 getApi();
+
+
+const audioPortal = new Audio('./assets/sound/portal-gun-sound-effect.mp3');
+
+
+function portalInteract(){
+  audioPortal.play();
+  $('.portal').addClass('animate__animated animate__rubberBand')
+  $('.rEm').removeClass('animate__animated animate__zoomIn')
+    setTimeout(function(){
+      $('.portal').removeClass('animate__animated animate__rubberBand')
+      $('.rEm').addClass('animate__animated animate__zoomIn')
+    },1000)
+}

@@ -25,6 +25,7 @@ h1{
 
 
 h2{
+    
     font-size: 30px;
     text-transform: uppercase;
     color:#D3D04F;
@@ -33,8 +34,9 @@ h2{
     width: fit-content;
     padding: 10px;
     text-align: center;
-    margin: 0 auto;
+    margin: 25px auto;
 }
+
 
 body{
     background-color:#8eac50 ;
@@ -60,8 +62,15 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
+#logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
 
 .fold{
     background-color: #8eac50;
@@ -82,13 +91,17 @@ header{
     display: flex;
     align-items: center;
     width: 380px;
+    padding: 15px;
     justify-content: space-around;
     background-color: #17594a;
+    border-radius: 10px;
+    box-shadow: 3px 5px 19px -6px #3d3b3b;
 }
 
 .card div p{
     font-family: 'Oswald', sans-serif;
     font-size: 20px;
+    color: #FFF;
 }
 
 .img{
@@ -110,6 +123,27 @@ footer{
     color:#FFF;
 }
 
+#vermais{
+    border: none;
+    outline: 0;
+    background: none;
+    cursor: pointer;
+
+}
+
+#vermais p{
+    position: relative;
+    font-size: 27px;
+    color: #03b0c7;
+    font-family: 'Karla';
+    top: 46px;
+    font-weight: bold;
+    -webkit-text-stroke: #d2d851;
+    -webkit-text-stroke-width: 1px;
+    text-shadow: 3px 4px 5px #000000;
+
+}
+
 
 @keyframes rotate {
     from {
@@ -128,3 +162,14 @@ footer{
       opacity: 1;
     }
   }
+
+
+@media screen and (max-width:700px) {
+    h1{
+        font-size: 50px;
+    }
+
+    .navbar{
+        padding: 0;
+    }
+}
