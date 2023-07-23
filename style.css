@@ -5,6 +5,17 @@
     font-family: 'Karla', sans-serif;
 }
 
+
+html {
+    -webkit-tap-highlight-color:transparent;/*pode ser transparent também*/
+  }
+
+textarea:focus, input:focus, select:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+} 
+
 @font-face {
     font-family: get_schwifty;
     src: url(./assets/fonts/get-schwifty/get_schwifty.ttf);
